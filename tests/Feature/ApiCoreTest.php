@@ -23,7 +23,7 @@ class ApiCoreTest extends TestCase
 
     public function test_api_unauthenticated_returns_rfc_7807_problem_details(): void
     {
-        $response = $this->getJson('/api/user');
+        $response = $this->getJson('/api/v1/auth/me');
 
         $response->assertStatus(401);
         $response->assertHeader('Content-Type', 'application/problem+json');
