@@ -1,15 +1,23 @@
 <?php
 
 use App\Http\Controllers\Api\V1\AuthTokenController;
+use App\Http\Controllers\Api\V1\BookReferenceController;
 use App\Http\Controllers\Api\V1\BukuApiController;
+use App\Http\Controllers\Api\V1\GithubPortfolioController;
 use App\Http\Controllers\Api\V1\PeminjamanApiController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1')->group(function () {
     // =========================================================================
-    // 1. ENDPOINT PUBLIK (Autentikasi & Katalog Baca)
+    // 1. ENDPOINT PUBLIK (Autentikasi, Katalog Baca, & Service Consumer)
     // =========================================================================
     Route::post('/auth/login', [AuthTokenController::class, 'login']);
+
+    // REST Service Consumer: Integrasi Eksternal GitHub API
+    Route::get('/portfolios/github/{username}', [GithubPortfolioController::class, 'show']);
+
+    // REST Service Consumer: Pengayaan Metadata Buku OpenLibrary API
+    Route::get('/bukus/{id}/referensi-eksternal', [BookReferenceController::class, 'show']);
 
     // Katalog Buku (Read-Only)
     Route::get('/bukus', [BukuApiController::class, 'index']);
