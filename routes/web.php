@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\Soap\LibrarySoapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,11 @@ Route::resource('kategori', KategoriController::class);
 
 // Resource Controller untuk Entitas Buku (7 method CRUD)
 Route::resource('buku', BukuController::class);
+
+/*
+|--------------------------------------------------------------------------
+| SOAP Web Service Routes (Sistem Bebas Pustaka Yudisium Legacy)
+|--------------------------------------------------------------------------
+*/
+Route::get('/soap/sipus.wsdl', [LibrarySoapController::class, 'wsdl']);
+Route::post('/soap/sipus', [LibrarySoapController::class, 'handle']);
