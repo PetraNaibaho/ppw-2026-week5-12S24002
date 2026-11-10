@@ -1,0 +1,9 @@
+# Use this workspace to collaborate
+workspace:
+  id: 5d08d968-1685-4e5b-8a5b-23d878e5fc39
+
+localResources:
+  collections:
+    - ../docs/SIPUS-Del-API-v1.postman_collection.json
+  specs:
+    - ../docs/openapi-sipus-v1.yaml
