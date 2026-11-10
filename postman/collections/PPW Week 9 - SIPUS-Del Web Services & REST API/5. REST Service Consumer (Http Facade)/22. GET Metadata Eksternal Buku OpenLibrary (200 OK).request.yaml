@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/bukus/1/referensi-eksternal"
+method: GET
+headers:
+  Accept: application/json
+order: 1000

@@ -7,3 +7,7 @@ localResources:
     - ../docs/SIPUS-Del-API-v1.postman_collection.json
   specs:
     - ../docs/openapi-sipus-v1.yaml
+
+cloudResources:
+  collections:
+    ../postman/collections/PPW Week 9 - SIPUS-Del Web Services & REST API: ecd674c0-edd2-46b2-8e26-c032a0a1aede

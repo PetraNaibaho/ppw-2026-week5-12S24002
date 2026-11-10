@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{soap_url}}"
+method: POST
+headers:
+  Content-Type: text/xml; charset=utf-8
+body:
+  type: text
+  content: |-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:m="http://sipus.del.ac.id/soap/clearance">
+        <soap:Body>
+            <m:CheckClearanceStatusRequest>
+                <m:nim_peminjam>12S22001</m:nim_peminjam>
+            </m:CheckClearanceStatusRequest>
+        </soap:Body>
+    </soap:Envelope>
+order: 2000

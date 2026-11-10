@@ -1,0 +1,10 @@
+$kind: http-request
+name: 04. POST SOAP Fault - XML Cacat / Parameter Kosong (500 Fault)
+url: "{{soap_url}}"
+method: POST
+headers:
+  Content-Type: text/xml; charset=utf-8
+body:
+  type: text
+  content: <invalid-xml-format>
+order: 4000

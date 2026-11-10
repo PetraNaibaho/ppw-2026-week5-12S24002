@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/auth/login"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "email": "pustakawan@del.ac.id",
+        "password": "passwordsalah"
+    }
+order: 2000

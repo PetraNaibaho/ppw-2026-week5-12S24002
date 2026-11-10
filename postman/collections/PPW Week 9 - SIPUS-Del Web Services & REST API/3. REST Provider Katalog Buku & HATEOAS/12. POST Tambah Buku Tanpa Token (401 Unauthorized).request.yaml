@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/bukus"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "isbn": "9780000000000",
+        "judul": "Buku Ilegal Tanpa Auth"
+    }
+order: 4000

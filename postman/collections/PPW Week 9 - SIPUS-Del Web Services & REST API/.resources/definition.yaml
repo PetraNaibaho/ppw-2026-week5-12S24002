@@ -1,0 +1,6 @@
+$kind: collection
+description: Koleksi pengujian lengkap Web Services SIPUS-Del (SOAP Clearance Check, REST API Provider Sirkulasi & Katalog HATEOAS, RFC 7807 Problem Details, Sanctum Bearer Token, dan REST Consumer OpenLibrary/GitHub).
+variables:
+  base_url: http://localhost:8000/api/v1
+  soap_url: http://localhost:8000/soap/sipus
+  token: ""

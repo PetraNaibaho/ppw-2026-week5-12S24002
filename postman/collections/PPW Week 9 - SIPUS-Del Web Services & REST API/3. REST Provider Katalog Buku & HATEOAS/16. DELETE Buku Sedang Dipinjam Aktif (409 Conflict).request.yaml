@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{base_url}}/bukus/1"
+method: DELETE
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 8000

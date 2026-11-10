@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{base_url}}/peminjamans/1/kembalikan"
+method: PATCH
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 5000

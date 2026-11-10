@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{base_url}}/bukus"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "isbn": "9786020000011",
+        "judul": "Arsitektur Cloud & RESTful Web Services Modern",
+        "penulis": "Chandro Pardede, S.Kom., M.Sc.",
+        "penerbit": "Del Press Laguboti",
+        "tahun_terbit": 2025,
+        "kategori_id": 1,
+        "stok": 10,
+        "sinopsis": "Buku komprehensif panduan membangun layanan terdistribusi berskala besar."
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 5000

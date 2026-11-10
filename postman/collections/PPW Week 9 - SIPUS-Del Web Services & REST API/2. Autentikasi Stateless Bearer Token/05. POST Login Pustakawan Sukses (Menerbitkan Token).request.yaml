@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{base_url}}/auth/login"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "email": "pustakawan@del.ac.id",
+        "password": "password123",
+        "device_name": "postman-desktop"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      var jsonData = pm.response.json();
+      if (jsonData.data && jsonData.data.access_token) {
+          pm.collectionVariables.set('token', jsonData.data.access_token);
+      }
+    language: text/javascript
+order: 1000

@@ -1,0 +1,11 @@
+$kind: http-request
+name: 07. GET Profil Pemilik Token (auth/me)
+url: "{{base_url}}/auth/me"
+method: GET
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 3000

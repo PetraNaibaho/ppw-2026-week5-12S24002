@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{base_url}}/peminjamans?status=dipinjam"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  status: dipinjam
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 1000

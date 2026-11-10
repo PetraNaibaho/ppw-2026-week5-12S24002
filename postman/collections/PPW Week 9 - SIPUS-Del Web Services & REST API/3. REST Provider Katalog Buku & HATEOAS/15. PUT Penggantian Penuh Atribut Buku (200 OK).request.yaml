@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{base_url}}/bukus/1"
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "isbn": "9786022987101",
+        "judul": "Clean Code Edisi Bahasa Indonesia Komprehensif",
+        "penulis": "Robert C. Martin (Tim Penerjemah Del)",
+        "penerbit": "Informatika Bandung",
+        "tahun_terbit": 2024,
+        "kategori_id": 1,
+        "stok": 15
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 7000

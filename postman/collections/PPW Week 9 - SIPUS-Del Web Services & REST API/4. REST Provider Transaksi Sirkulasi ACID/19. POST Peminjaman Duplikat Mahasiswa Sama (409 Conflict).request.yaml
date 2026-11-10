@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{base_url}}/peminjamans"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "buku_id": 2,
+        "nim_peminjam": "12S24050",
+        "nama_peminjam": "Daniel Situmorang",
+        "durasi_hari": 7
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 3000
